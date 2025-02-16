@@ -24,7 +24,7 @@ jobs:
         uses: tailscale/github-action@v3
         with:
           authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
-          args: --ssh --accept-dns=false
+          args: --ssh --accept-dns=false --operator=runner
           hostname: crc
 
       - name: Change DNS settings
